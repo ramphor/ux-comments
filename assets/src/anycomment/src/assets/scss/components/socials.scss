@@ -1,0 +1,37 @@
+.anycomment-tabs {
+
+  &__menu-socials {
+    ul {
+      li {
+        &.toggled {
+          a {
+            position: relative;
+            &::after {
+              content: '';
+              position: absolute;
+              right: 15px;
+              top: 50%;
+              margin-top: -16px;
+              width: 32px;
+              height: 32px;
+              background-color: #39b349;
+              @include border-radius(50%);
+            }
+          }
+        }
+
+        a {
+          padding: 5px;
+
+          img {
+            width: 41px;
+            height: 41px;
+            vertical-align: middle;
+            display: inline-block;
+            margin-right: 9px;
+          }
+        }
+      }
+    }
+  }
+}

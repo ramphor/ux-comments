@@ -1,0 +1,12 @@
+.env
+.sass-cache
+node_modules
+cache/*
+!cache/index.php
+languages/anycomment-*backup*.po
+languages/anycomment-*backup*.pot
+static/css/main-custom-*.min.css
+static/css/*css.map
+static/js/*js.map
+vendor
+.idea

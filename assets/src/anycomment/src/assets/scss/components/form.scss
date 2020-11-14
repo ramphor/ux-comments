@@ -1,0 +1,125 @@
+$green: #53af4a;
+$description-color: #686868;
+$border-color: #b6c1c6;
+
+@mixin colored-switches($switch-background-active) {
+  input:checked ~ .switch-paddle {
+    background: $switch-background-active;
+  }
+}
+
+.anycomment-form {
+
+  &-wrapper {
+
+    &__field {
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        border-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      margin-top: 25px;
+      border-bottom: 1px solid #c4c4c4;
+      padding-bottom: 25px;
+    }
+
+    label {
+      font-size: $global-font-size;
+      font-weight: bold;
+      color: #686868;
+      line-height: 1;
+    }
+
+    .description {
+      font-size: $global-font-size - 4;
+      font-weight: 200;
+      margin: 5px 0 0;
+      font-style: normal;
+      padding: 0;
+      color: $description-color;
+    }
+
+    select.anycomment-select2 {
+      display: none;
+    }
+
+    textarea {
+      width: 100%;
+      max-width: 100%;
+      min-width: 100%;
+    }
+
+    input[type="number"],
+    input[type="color"] {
+      max-width: 200px;
+    }
+
+    textarea,
+    input[type="text"],
+    input[type="number"],
+    .select2-container {
+      margin: 10px 0 0;
+    }
+
+    textarea,
+    input[type="text"],
+    input[type="number"] {
+      border: 1px solid $border-color;
+      padding: 9px;
+      background-color: #fff;
+      color: #000;
+      box-shadow: none;
+      @include border-radius(6px);
+    }
+
+    input.anycomment-input-color {
+      padding: 9px 10px 10px 36px;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+      line-height: 39px;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
+      height: 39px;
+    }
+
+    .switch {
+      &,
+      &.primary {
+        @include colored-switches($primary-color)
+      }
+
+      &.secondary {
+        @include colored-switches($secondary-color)
+      }
+
+      &.success {
+        @include colored-switches($success-color)
+      }
+
+      &.alert {
+        @include colored-switches($alert-color)
+      }
+
+      &.warning {
+        @include colored-switches($warning-color)
+      }
+    }
+  }
+
+  .select2-container .select2-selection--single,
+  input[type="text"],
+  input[type="number"] {
+    height: 39px;
+  }
+
+  input[type="submit"] {
+    margin-top: 40px;
+  }
+}

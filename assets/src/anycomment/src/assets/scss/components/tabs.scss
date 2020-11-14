@@ -1,0 +1,59 @@
+.anycomment-tabs {
+  &__menu {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        margin-bottom: 5px;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        &.active,
+        &.current {
+          a {
+            background-color: #b6c1c6;
+            border: 1px solid #b6c1c6;
+            color: #fff;
+          }
+        }
+
+        a {
+          padding: 15px;
+          color: #858585;
+          border: 1px solid #b6c1c6;
+          background-color: #e8edef;
+          display: block;
+          width: 100%;
+          font-size: $global-font-size + 4;
+          font-weight: 400;
+          box-shadow: none;
+          @include border-radius(10px);
+
+          &:hover,
+          &:active,
+          &:focus {
+            background-color: #b6c1c6;
+            border: 1px solid #b6c1c6;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  &__container {
+    padding: 0 20px;
+
+    &__tab.current {
+      display: block;
+    }
+
+    &__tab {
+      display: none;
+    }
+  }
+}
